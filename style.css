@@ -15,9 +15,11 @@ header nav {
 header nav ul {
   width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
   margin-right: 5vh;
+  white-space: nowrap;
   li {
     a {
       text-decoration: none;
@@ -59,6 +61,12 @@ header nav ul {
   height: 100%;
 }
 
+#section-1 aside video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* SECTION 2 */
 
 #section-2 {
@@ -93,6 +101,9 @@ header nav ul {
   height: 100%;
   gap: 1rem;
   padding: 1rem;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* SECTION 2 RIGHT */
@@ -132,4 +143,42 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1024px) {
+  /* NAV */
+  header nav {
+    justify-content: center;
+  }
+  header nav ul {
+    margin: 0;
+    gap: 3rem;
+  }
+  /* SECTION 1 */
+  #section-1 {
+    flex-direction: column;
+  }
+  #section-1 aside,
+  #section-1 article {
+    width: 100%;
+    height: 50%;
+  }
+  /* SECTION 2 */
+  #section-2 {
+    flex-direction: column;
+    height: 80vh;
+  }
+  #section-2-left,
+  #section-2-right {
+    width: 100%;
+  }
+  #section-2-bottom {
+    flex-direction: column;
+  }
+  #section-2-bottom aside,
+  #section-2-bottom article {
+    width: 100%;
+  }
 }
